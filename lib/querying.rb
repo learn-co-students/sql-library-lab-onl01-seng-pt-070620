@@ -12,19 +12,18 @@ def select_name_and_motto_of_char_with_longest_motto
   "SELECT characters.name, characters.motto FROM characters ORDER BY LENGTH(motto) DESC LIMIT 1"
 end
 
-
 def select_value_and_count_of_most_prolific_species
   "SELECT characters.species, COUNT(*) FROM characters WHERE characters.species = 'human'"
 end
 
 def select_name_and_series_subgenres_of_authors
-  "Write your SQL query here"
+  "SELECT authors.name, subgenres.name FROM subgenres JOIN series ON series.id = subgenre_id INNER JOIN authors ON series.author_id = authors.id"
 end
 
 def select_series_title_with_most_human_characters
-  "Write your SQL query here"
+  "SELECT series.title FROM series WHERE characters.species ='human' ORDER BY LENGTH(series.title) DESC LIMIT 1"
 end
 
 def select_character_names_and_number_of_books_they_are_in
-  "Write your SQL query here"
+  "SELECT characters.name, COUNT(books.id) FROM characters JOIN character_books ON character_books.character_id INNER JOIN books ON character_books.book_id = books.id GROUP BY characters.name ORDER BY COUNT(books.id) DES"
 end
