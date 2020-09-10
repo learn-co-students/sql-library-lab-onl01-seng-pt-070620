@@ -56,10 +56,3 @@ end
 
 
 
-  # "SELECT characters.name, COUNT(*) as book_count from character_books 
-  # JOIN characters ON character_books.character_id = characters.id 
-  # GROUP BY characters.name ORDER BY book_count DESC"
-
-  # "SELECT characters.name, COUNT(*) as book_count from character_books 
-  # JOIN characters ON character_books.character_id = characters.id 
-  # GROUP BY characters.name ORDER BY book_count DESC"
